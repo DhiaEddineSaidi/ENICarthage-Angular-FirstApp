@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   mapromo = 'IF2';
+  counter: number = 1;
+  increment() {
+    ++this.counter;
+  }
+  decrement() {
+    --this.counter;
+  }
 }
