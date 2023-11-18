@@ -2,9 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
-  template: `<div>Your Item is : {{item}}</div>
-              <label> Add an item : <input #newItem></label>
-              <button (click)= "addNewItem(newItem.value)"> Add to parent's list</button>`,
+  templateUrl: './child.component.html' ,
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {

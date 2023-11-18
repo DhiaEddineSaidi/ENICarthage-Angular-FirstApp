@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ParentComponent } from './parent/parent.component';
-import { ChildComponent } from './child/child.component';
-import {DataProviderService} from './data-provider.service'
+import {DataProviderService} from './data-provider.service';
+import { LoginComponent } from './login/login.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component'
+import { CommunicationModule } from './communication/communication.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ParentComponent,
-    ChildComponent
+    LoginComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommunicationModule
   ],
   providers: [DataProviderService],
   bootstrap: [AppComponent]

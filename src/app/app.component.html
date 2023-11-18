@@ -1,19 +1,9 @@
-<div class="app-component-welcome">
-  <h1> Welcome to {{mapromo}}</h1>
-  <input type="text" [(ngModel)]= "mapromo">
-  <label> Ma Promo est {{mapromo}} </label>
-  <button (click)="decrement()" [disabled]="counter==0"> - </button>
-  <label>Counter : {{counter}} </label>
-  <button (click)="increment()" [disabled]="counter==10"> + </button>
-
-<br>
-<h1> Components Communication </h1>
-<app-parent></app-parent>
-
-
-
-<br>
-<h1> Utilisation de service </h1>
-<app-home></app-home>
-
-</div>
+<nav>
+  <ul>
+    <li><a routerLink="/home">Home Page </a></li>
+    <li><a routerLink="/login">Login Page </a></li>
+    <li><a routerLink="/databinding">DataBinding Page </a></li>
+     
+  </ul>
+</nav>
+<router-outlet></router-outlet>
