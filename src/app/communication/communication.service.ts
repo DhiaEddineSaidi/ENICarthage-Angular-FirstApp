@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject} from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class CommunicationService {
-    subject: Subject<String> = new Subject<String>()
+    subject: BehaviorSubject<String> = new BehaviorSubject<String>('')
 
     write(text:String){
         this.subject.next(text)
     }
-    read(): Subject<String>{
+    read(): BehaviorSubject<String>{
         return this.subject
     }
  

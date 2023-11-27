@@ -5,14 +5,13 @@ import { CommunicationService } from '../communication.service';
   selector: 'app-parent',
   templateUrl: './parent.component.html' ,
   styleUrls: ['./parent.component.css'],
-  providers: [CommunicationService]
 })
 export class ParentComponent {
 
   constructor(private cs: CommunicationService){}
   
-  speakToChild(){
-    this.cs.write('')
+  speakToHome(){
+    this.cs.write('Bonjour je suis le composant parent')
   }
   currentItem = "smartphone"
   items = ['TV', 'smartWatch', 'Tablet'];

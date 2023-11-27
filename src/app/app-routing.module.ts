@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { ParentComponent } from './communication/parent/parent.component';
 import { ChildComponent } from './communication/child/child.component';
+import { PersonComponent } from './back-end-communication/person/person.component';
 
 const routes: Routes = [
   { path: 'home', title: 'HOME', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
       { path: 'child', component: ChildComponent }
     ]
   },
-  { path: 'databinding' , loadChildren: () => import('./databinding/databinding.module').then(m => m.DatabindingModule) },
+  { path: 'backendcommunication', component: PersonComponent },
+  { path: 'databinding', title: 'DataBinding', loadChildren: () => import('./databinding/databinding.module').then(m => m.DatabindingModule) },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', title: 'PAGE NOT FOUND', component: NotFoundPageComponent },
 ];

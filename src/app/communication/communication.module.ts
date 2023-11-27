@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
@@ -11,8 +10,7 @@ import { ParentComponent } from './parent/parent.component';
     ChildComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule
+    CommonModule
   ]
 })
 export class CommunicationModule { }

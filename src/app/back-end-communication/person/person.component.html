@@ -1,4 +1,25 @@
-<div> resultat de getData() est : {{providedData}}</div>
-<button (click)="addPassions()">Ajouter Les passions</button>
+<h1>Resultat de ShowBackEndData</h1>
+<table *ngIf="persons">
+    <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>PRENOM</th>
+        <th>DATE DE NAISSANCE</th>
+        <th>E-MAIL</th>
+        <th>LOGIN</th>
+        <th>ECOLE</th>
+        <th>ROLE</th>
+    </tr>
+    <tr *ngFor="let person of persons">
+        <td>{{person._id}}</td>
+        <td>{{person.nom}}</td>
+        <td>{{person.prenom}}</td>
+        <td>{{person.dateNaissance | date:'dd/MM/yyy'}}</td>
+        <td>{{person.e_mail}}</td>
+        <td>{{person.credentials.login}}</td>
+        <td>{{person.ecole}}</td>
+        <td>{{person.role}}</td>
+    </tr>
+</table>
 <br>
 <button (click)="showBackEndData()">GetData From BackEnd</button>

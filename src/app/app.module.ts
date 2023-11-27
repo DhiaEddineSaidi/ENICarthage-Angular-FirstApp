@@ -9,6 +9,7 @@ import {DataProviderService} from './data-provider.service';
 import { LoginComponent } from './login/login.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component'
 import { CommunicationModule } from './communication/communication.module';
+import { BackEndCommunicationModule } from './back-end-communication/back-end-communication.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CommunicationModule } from './communication/communication.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    CommunicationModule
+    CommunicationModule,
+    BackEndCommunicationModule
   ],
   providers: [DataProviderService],
   bootstrap: [AppComponent]
